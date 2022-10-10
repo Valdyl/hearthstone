@@ -8,7 +8,8 @@
 
 <script>
 
-import anime from 'animejs'
+import { animate } from "motion"
+
 import rare from '@/assets/sound/rare.mp3'
 import epic from '@/assets/sound/epic.mp3'
 import legendaire from '@/assets/sound/legendaire.mp3'
@@ -47,12 +48,7 @@ export default {
         },
         animationCard(){
             const targetCard = this.$refs.card
-            anime({
-              targets:targetCard,
-              opacity: [0, 1],
-              duration: 300,
-              easing: 'linear'
-            })
+            animate(targetCard, {opacity:[0,1]},{duration: .5, easing :"ease-out"})
         }
     },
     mounted(){

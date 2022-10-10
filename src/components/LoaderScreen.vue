@@ -7,7 +7,8 @@
   </template>
   
   <script>
-    import anime from 'animejs'
+    import { animate } from "motion"
+
 
     export default {
       name: 'LoaderScreen',
@@ -22,37 +23,18 @@
             const targetLoader = this.$refs.loader
             const targetLogoContainer = this.$refs.logoContainer
             const vm = this
-            anime({
-              targets:targetLogo,
-              scale: [0.6, 1.2],
-              duration: 3000,
-              easing: 'easeOutQuad',
-              delay: 200,
-              complete: function(){
-                anime({
-                    targets:targetLoader,
-                    opacity: 0,
-                    duration: 1000,
-                    easing: 'easeOutQuad',
-                    delay: 1000,
-                    complete: function(){
-                        vm.launched = false
-                    }
-                })
-              }
+            
+            animate(targetLogo, {scale:[0.6, 1.2]},{duration: 2.5, easing :"ease-out", delay: 0.2}).finished.then(() => {
+              animate(targetLoader, {opacity:0},{duration: 1, easing :"ease-out", delay: 1}).finished.then(() => {
+                vm.launched = false
+              })
             })
-            anime({
-              targets:targetLogoContainer,
-              opacity: 1,
-              duration: 2000,
-              easing: 'easeOutExpo',
-              delay: 200
-            })
+            
+            animate(targetLogoContainer, {opacity:1},{duration: 1.5, easing :"ease-out", delay: 0.2})
         }
       },
       mounted(){
         document.addEventListener('DOMContentLoaded', this.animationLogo(), false);
-        
       }
     }
   </script>

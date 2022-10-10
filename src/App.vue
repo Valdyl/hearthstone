@@ -24,7 +24,7 @@ import CardContainer from './components/CardContainer.vue'
 import HeroContainer from './components/HeroContainer.vue'
 import Collection from './components/Collection.vue'
 
-import anime from 'animejs'
+import { animate } from "motion"
 
 export default {
   name: 'App',
@@ -44,23 +44,12 @@ export default {
   },
   methods:{
     ...mapActions(collectionCardsStore,['showCollection']),
-
-
     launchCollection(){
       const targetButton = this.$refs.button
-      anime({
-        targets:targetButton,
-        scale: .95,
-        duration:100,
-        complete: function() {
-          anime({
-            targets:targetButton,
-            scale: 1,
-            duration:100,
-          })
-        }
+      animate(targetButton, {scale:.95},{duration: .1}).finished.then(() => {
+        this.showCollection()
+        animate(targetButton, {scale:1},{duration: .1})
       })
-      this.showCollection()
     }
   },
   mounted(){

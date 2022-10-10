@@ -18,12 +18,15 @@
 </template>
 
 <script>
-import anime from 'animejs'
+
+import { animate } from "motion"
+
 import { mapState} from 'pinia'
 import { mapActions} from 'pinia'
 import cardList from "../cardList.json"
 import {collectionCardsStore} from "@/stores/collectionCards"
 import Card from '@/components/Card.vue'
+
 export default {
   name: 'CardContainer',  
   data(){
@@ -36,10 +39,10 @@ export default {
     }
   },
   computed:{
-      ...mapState(collectionCardsStore,['collectionArr' , 'isVisible']),
+      ...mapState(collectionCardsStore,['collectionArr' , 'isVisible'])
   },
   components: {
-    Card,
+    Card
   },
   methods:{
     ...mapActions(collectionCardsStore,['addCardIntoCollection']),
@@ -66,18 +69,9 @@ export default {
     },
     getnewPackage(){
       const targetButton = this.$refs.button
-       anime({
-          targets:targetButton,
-          scale: .95,
-          duration:100,
-          complete: function() {
-            anime({
-              targets:targetButton,
-              scale: 1,
-              duration:100,
-            })
-          }
-        })
+      animate(targetButton, {scale:.95},{duration: .1}).finished.then(() => {
+        animate(targetButton, {scale:1},{duration: .1})
+      })
       this.pushIntoCollection(this.cardPicked)
       this.getRandomCards(this.cardCollection)
     },
@@ -93,6 +87,5 @@ export default {
   mounted(){
     this.getRandomCards(this.cardCollection)
   }
-
 }
 </script>
