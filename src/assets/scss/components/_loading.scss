@@ -1,0 +1,23 @@
+.loading{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/loading_bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo{
+    &__container{
+        opacity: 0;
+        width: 60%;
+    }
+    width: 100%;
+}

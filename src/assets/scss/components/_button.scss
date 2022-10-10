@@ -1,0 +1,24 @@
+.button{
+    font-family: "Belwe Bold";
+    background: url(../img/button-large.png);
+    background-size: 580px 110px;
+    background-repeat: no-repeat;
+    background-position: left;
+    border: 0;
+    width: 290px;
+    height: 116px;
+    position: relative;
+    cursor:url(../cursors/hand-pointer.png) 2 2, pointer;
+    font-size: 20px;
+    &:hover{
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    @include responsive(large){
+        background-size: 480px 90px;
+        width: 240px;
+        height: 90px; 
+        font-size: 17px;   
+    }
+
+}
