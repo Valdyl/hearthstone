@@ -2,21 +2,21 @@
     position: relative;
     transition: transform .6s ease;
     width: 230px;
-    height: 330px;
+    // height: 330px;
+    aspect-ratio: 9/13;
     perspective: 1000px;
     margin: 0 10px;
     cursor:url(../cursors/hand-pointer.png) 2 2, pointer;
     @include responsive(large){
         width: 180px;
-        height: 260px;
     }
     &::after{
         content: "";
         width: 195px;
+        aspect-ratio: 9/11;
         left: 18px;
         top: 50px;
         display: block;
-        height: 255px;
         position: absolute;
         z-index: -5;
         opacity: 0;
