@@ -36,25 +36,25 @@ export default {
             switch(this.sound){
                 case 'rare':
                     if(this.gold == true){
-                        return new Audio("/sound/rareGold.mp3");
+                        return new Audio("./sound/rareGold.mp3");
                     }else{
-                        return new Audio("/sound/rare"+random+".mp3");
+                        return new Audio("./sound/rare"+random+".mp3");
                     }
                 case 'epic':
                     if(this.gold == true){
-                        return new Audio("/sound/epicGold.mp3");
+                        return new Audio("./sound/epicGold.mp3");
                     }else{
-                        return new Audio("/sound/epic"+random+".mp3");
+                        return new Audio("./sound/epic"+random+".mp3");
                     }
                 case 'legendaire':
                     if(this.gold == true){
-                        return new Audio("/sound/legendaireGold.mp3");
+                        return new Audio("./sound/legendaireGold.mp3");
                     }else{
-                        return new Audio("/sound/legendaire"+random+".mp3");
+                        return new Audio("./sound/legendaire"+random+".mp3");
                     }
                 default:
                     if(this.gold == true){
-                        return new Audio("/sound/gold.mp3");
+                        return new Audio("./sound/gold.mp3");
                     }
                     return;
             }
