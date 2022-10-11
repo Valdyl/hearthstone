@@ -88,28 +88,28 @@
         "id":13,
         "img":"front-13",
         "rarity":"rare",
-        "gold":true,
+        "gold":false,
         "sound":"rare"
     },
     {
         "id":14,
         "img":"front-14",
         "rarity":"commune",
-        "gold":true,
+        "gold":false,
         "sound":"commune"
     },
     {
         "id":15,
         "img":"front-15",
         "rarity":"rare",
-        "gold":true,
+        "gold":false,
         "sound":"rare"
     },
     {
         "id":16,
         "img":"front-16",
         "rarity":"epic",
-        "gold":true,
+        "gold":false,
         "sound":"epic"
     },
     {
@@ -156,24 +156,59 @@
     },
     {
         "id":23,
-        "img":"front-22",
-        "rarity":"rare",
+        "img":"front-23",
+        "rarity":"commune",
         "gold":false,
-        "sound":"rare"
+        "sound":"commune"
     },
     {
         "id":24,
-        "img":"front-22",
-        "rarity":"rare",
+        "img":"front-24",
+        "rarity":"commune",
         "gold":false,
-        "sound":"rare"
+        "sound":"commune"
     },
     {
         "id":25,
-        "img":"front-22",
-        "rarity":"rare",
+        "img":"front-25",
+        "rarity":"commune",
         "gold":false,
-        "sound":"rare"
+        "sound":"commune"
+    },
+    {
+        "id":26,
+        "img":"front-26",
+        "rarity":"commune",
+        "gold":false,
+        "sound":"commune"
+    },
+    {
+        "id":27,
+        "img":"front-27",
+        "rarity":"commune",
+        "gold":false,
+        "sound":"commune"
+    },
+    {
+        "id":28,
+        "img":"front-27",
+        "rarity":"commune",
+        "gold":false,
+        "sound":"commune"
+    },
+    {
+        "id":29,
+        "img":"front-27",
+        "rarity":"commune",
+        "gold":false,
+        "sound":"commune"
+    },
+    {
+        "id":30,
+        "img":"front-27",
+        "rarity":"commune",
+        "gold":false,
+        "sound":"commune"
     }
     
 

@@ -9,10 +9,6 @@
 <script>
 
 import { animate } from "motion"
-
-import rare from '@/assets/sound/rare.mp3'
-import epic from '@/assets/sound/epic.mp3'
-import legendaire from '@/assets/sound/legendaire.mp3'
 import {collectionCardsStore} from "@/stores/collectionCards"
 import { mapActions} from 'pinia'
 
@@ -35,15 +31,32 @@ export default {
 
         },
         getSound(){
+            let random = Math.round(Math.random()) + 1
+            
             switch(this.sound){
                 case 'rare':
-                    return new Audio(rare);
+                    if(this.gold == true){
+                        return new Audio("/sound/rareGold.mp3");
+                    }else{
+                        return new Audio("/sound/rare"+random+".mp3");
+                    }
                 case 'epic':
-                    return new Audio(epic);
+                    if(this.gold == true){
+                        return new Audio("/sound/epicGold.mp3");
+                    }else{
+                        return new Audio("/sound/epic"+random+".mp3");
+                    }
                 case 'legendaire':
-                    return new Audio(legendaire);
+                    if(this.gold == true){
+                        return new Audio("/sound/legendaireGold.mp3");
+                    }else{
+                        return new Audio("/sound/legendaire"+random+".mp3");
+                    }
                 default:
-                    console.log('oups');
+                    if(this.gold == true){
+                        return new Audio("/sound/gold.mp3");
+                    }
+                    return;
             }
         },
         animationCard(){
