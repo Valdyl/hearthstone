@@ -10,6 +10,7 @@
             :img="card.img"
             :rarity="card.rarity"
             :gold="card.gold"
+            :turnOver="card.turnOver"
             :sound="card.sound"
             :itemId="card.id"
             :card ="card"

@@ -8,6 +8,7 @@
       :rarity="card.rarity"
       :gold="card.gold"
       :sound="card.sound"
+      :turnOver="card.turnOver"
       :itemId="card.id"
       :card ="card"
       customClass=""

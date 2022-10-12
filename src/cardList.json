@@ -5,210 +5,294 @@
         "img":"front-01",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":2,
         "img":"front-02",
         "rarity":"epic",
         "gold":false,
-        "sound":"epic"
+        "sound":[
+            "./sound/epic1.mp3",
+            "./sound/epic2.mp3",
+            "./sound/epic3.mp3"
+        ],
+        "turnOver": "./sound/turnover/epic.mp3"
     },
     {
         "id":3,
         "img":"front-03",
         "rarity":"rare",
         "gold":false,
-        "sound":"rare"
+        "sound":[
+            "./sound/rare1.mp3",
+            "./sound/rare2.mp3",
+            "./sound/rare3.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":4,
         "img":"front-04",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":5,
         "img":"front-05",
         "rarity":"legendaire",
         "gold":false,
-        "sound":"legendaire"
+        "sound":[
+            "./sound/legendaire1.mp3",
+            "./sound/legendaire2.mp3",
+            "./sound/legendaire3.mp3"
+        ],
+        "turnOver": "./sound/turnover/legendaire.mp3"
     },
     {
         "id":6,
         "img":"front-06",
         "rarity":"legendaire",
         "gold":false,
-        "sound":"legendaire"
+        "sound":[
+            "./sound/legendaire1.mp3",
+            "./sound/legendaire2.mp3",
+            "./sound/legendaire3.mp3"
+        ],
+        "turnOver": "./sound/turnover/legendaire.mp3"
     },
     {
         "id":7,
         "img":"front-07",
         "rarity":"rare",
         "gold":false,
-        "sound":"rare"
+        "sound":[
+            "./sound/rare1.mp3",
+            "./sound/rare2.mp3",
+            "./sound/rare3.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":8,
         "img":"front-08",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":9,
         "img":"front-09",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":10,
         "img":"front-10",
         "rarity":"commune",
         "gold":true,
-        "sound":"commune"
+        "sound":[
+            "./sound/gold/gold.mp3"
+        ],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":11,
         "img":"front-11",
         "rarity":"legendaire",
         "gold":false,
-        "sound":"legendaire"
+        "sound":[
+            "./sound/legendaire1.mp3",
+            "./sound/legendaire2.mp3",
+            "./sound/legendaire3.mp3"
+        ],
+        "turnOver": "./sound/turnover/legendaire.mp3"
     },
     {
         "id":12,
         "img":"front-12",
         "rarity":"epic",
         "gold":true,
-        "sound":"epic"
+        "sound":[
+            "./sound/gold/epicGold.mp3"
+        ],
+        "turnOver": "./sound/turnover/epic.mp3"
     },
     {
         "id":13,
         "img":"front-13",
         "rarity":"rare",
         "gold":false,
-        "sound":"rare"
+        "sound":[
+            "./sound/rare1.mp3",
+            "./sound/rare2.mp3",
+            "./sound/rare3.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":14,
         "img":"front-14",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":15,
         "img":"front-15",
         "rarity":"rare",
         "gold":false,
-        "sound":"rare"
+        "sound":[
+            "./sound/rare1.mp3",
+            "./sound/rare2.mp3",
+            "./sound/rare3.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":16,
         "img":"front-16",
         "rarity":"epic",
         "gold":false,
-        "sound":"epic"
+        "sound":[
+            "./sound/epic1.mp3",
+            "./sound/epic2.mp3",
+            "./sound/epic3.mp3"
+        ],
+        "turnOver": "./sound/turnover/epic.mp3"
     },
     {
         "id":17,
         "img":"front-17",
         "rarity":"rare",
         "gold":true,
-        "sound":"rare"
+        "sound":[
+            "./sound/gold/rareGold.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":18,
         "img":"front-18",
         "rarity":"rare",
         "gold":false,
-        "sound":"rare"
+        "sound":[
+            "./sound/rare1.mp3",
+            "./sound/rare2.mp3",
+            "./sound/rare3.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":19,
         "img":"front-19",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":20,
         "img":"front-20",
         "rarity":"epic",
         "gold":false,
-        "sound":"epic"
+        "sound":[
+            "./sound/epic1.mp3",
+            "./sound/epic2.mp3",
+            "./sound/epic3.mp3"
+        ],
+        "turnOver": "./sound/turnover/epic.mp3"
     },
     {
         "id":21,
         "img":"front-21",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":22,
         "img":"front-22",
         "rarity":"rare",
         "gold":false,
-        "sound":"rare"
+        "sound":[
+            "./sound/rare1.mp3",
+            "./sound/rare2.mp3",
+            "./sound/rare3.mp3"
+        ],
+        "turnOver": "./sound/turnover/rare.mp3"
     },
     {
         "id":23,
         "img":"front-23",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":24,
         "img":"front-24",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":25,
         "img":"front-25",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":26,
         "img":"front-26",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":27,
         "img":"front-27",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":28,
         "img":"front-27",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":29,
         "img":"front-27",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     },
     {
         "id":30,
         "img":"front-27",
         "rarity":"commune",
         "gold":false,
-        "sound":"commune"
+        "sound":[],
+        "turnOver": "./sound/turnover/commune.mp3"
     }
         
 ]

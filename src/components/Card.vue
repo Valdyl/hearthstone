@@ -2,7 +2,6 @@
     <div :class="'card '+rarity+' '+ customClass" ref="card" @click="revealFront()">
         <img ref="cardFront"  class="card-img card-front" :src="require('@/assets/img/custom-content/' + img + '.png')" alt="">
         <img ref="cardBack" class="card-img card-back" src="@/assets/img/custom-content/card_back.png" alt="">
-        <audio ref="sound"></audio>
     </div>
 </template>
 
@@ -15,13 +14,12 @@ import { mapActions} from 'pinia'
 export default {
 
     name: 'Card',
-    props:["img","rarity","gold","sound","customClass","itemId","card"],
+    props:["img","rarity","gold","sound","customClass","itemId","card","turnOver"],
     methods:{
         ...mapActions(collectionCardsStore,['addCardIntoCollection']),
-
         revealFront(){
             let audio = this.getSound();
-            let audioReturn = this.getTurnSound();
+            let audioReturn = new Audio(this.turnOver);
             if(!this.$refs.card.classList.contains("revealed")){
                 if(audio != undefined){
                     audio.volume = 0.8;
@@ -34,49 +32,12 @@ export default {
             this.$refs.card.classList.add("revealed")
         },
         getSound(){
-            // let random = Math.round(Math.random())*2 + 1
-            let random = 3
-            
-            switch(this.sound){
-                case 'rare':
-                    if(this.gold == true){
-                        return new Audio("./sound/gold/rareGold.mp3");
-                    }else{
-                        return new Audio("./sound/rare"+random+".mp3");
-                    }
-                case 'epic':
-                    if(this.gold == true){
-                        return new Audio("./sound/gold/epicGold.mp3");
-                    }else{
-                        return new Audio("./sound/epic"+random+".mp3");
-                    }
-                case 'legendaire':
-                    if(this.gold == true){
-                        return new Audio("./sound/gold/legendaireGold.mp3");
-                    }else{
-                        return new Audio("./sound/legendaire"+random+".mp3");
-                    }
-                default:
-                    if(this.gold == true){
-                        return new Audio("./sound/gold/gold.mp3");
-                    }
-                    return;
+            let random = 0
+            if(this.sound.length > 1){
+                // random = Math.round(Math.random()*(this.sound.length-1))
+                random = 2
             }
-        },
-        getTurnSound(){
-            switch(this.sound){
-                case 'commune':
-                    return new Audio("./sound/turnover/commune.mp3");
-                case 'rare':
-                        return new Audio("./sound/turnover/rare.mp3");
-                case 'epic':
-                    return new Audio("./sound/turnover/epic.mp3");
-                case 'legendaire':
-                    return new Audio("./sound/turnover/legendaire.mp3");
-                default:
-                    return;
-
-            }
+            return new Audio(this.sound[random]);
         },
         animationCard(){
             const targetCard = this.$refs.card
@@ -86,7 +47,6 @@ export default {
     mounted(){
         this.animationCard()
     }
-  
 }
 </script>
 
