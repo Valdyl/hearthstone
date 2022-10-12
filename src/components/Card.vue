@@ -21,42 +21,61 @@ export default {
 
         revealFront(){
             let audio = this.getSound();
+            let audioReturn = this.getTurnSound();
             if(!this.$refs.card.classList.contains("revealed")){
                 if(audio != undefined){
+                    audio.volume = 0.8;
                     audio.play()
                 }
+                audioReturn.volume = 0.6;
+                audioReturn.play()
                 this.addCardIntoCollection(this.card)
             }
             this.$refs.card.classList.add("revealed")
-
         },
         getSound(){
-            let random = Math.round(Math.random()) + 1
+            // let random = Math.round(Math.random())*2 + 1
+            let random = 3
             
             switch(this.sound){
                 case 'rare':
                     if(this.gold == true){
-                        return new Audio("./sound/rareGold.mp3");
+                        return new Audio("./sound/gold/rareGold.mp3");
                     }else{
                         return new Audio("./sound/rare"+random+".mp3");
                     }
                 case 'epic':
                     if(this.gold == true){
-                        return new Audio("./sound/epicGold.mp3");
+                        return new Audio("./sound/gold/epicGold.mp3");
                     }else{
                         return new Audio("./sound/epic"+random+".mp3");
                     }
                 case 'legendaire':
                     if(this.gold == true){
-                        return new Audio("./sound/legendaireGold.mp3");
+                        return new Audio("./sound/gold/legendaireGold.mp3");
                     }else{
                         return new Audio("./sound/legendaire"+random+".mp3");
                     }
                 default:
                     if(this.gold == true){
-                        return new Audio("./sound/gold.mp3");
+                        return new Audio("./sound/gold/gold.mp3");
                     }
                     return;
+            }
+        },
+        getTurnSound(){
+            switch(this.sound){
+                case 'commune':
+                    return new Audio("./sound/turnover/commune.mp3");
+                case 'rare':
+                        return new Audio("./sound/turnover/rare.mp3");
+                case 'epic':
+                    return new Audio("./sound/turnover/epic.mp3");
+                case 'legendaire':
+                    return new Audio("./sound/turnover/legendaire.mp3");
+                default:
+                    return;
+
             }
         },
         animationCard(){
