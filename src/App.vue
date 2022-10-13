@@ -11,6 +11,7 @@
     </div>
   </div>
   <Collection v-if="isVisible" />
+  <VolumeControle />
 </template>
 
 <script>
@@ -22,6 +23,7 @@ import {collectionCardsStore} from "@/stores/collectionCards"
 import LoaderScreen from './components/LoaderScreen.vue'
 import CardContainer from './components/CardContainer.vue'
 import HeroContainer from './components/HeroContainer.vue'
+import VolumeControle from './components/VolumeControle.vue'
 import Collection from './components/Collection.vue'
 
 import { animate } from "motion"
@@ -32,6 +34,7 @@ export default {
     LoaderScreen,
     CardContainer,
     HeroContainer,
+    VolumeControle,
     Collection
   },
   data(){

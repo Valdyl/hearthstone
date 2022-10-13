@@ -16,12 +16,13 @@
     rgb(0, 0, 0) 1.41734px -1.41108px 0px,
     rgb(0, 0, 0) 1.92034px -0.558831px 0px;
     background: url(../img/button-large.png);
-    background-size: 580px 110px;
+    background-size: 200%;
     background-repeat: no-repeat;
     background-position: left;
     border: 0;
     width: 290px;
-    height: 116px;
+    // height: 116px;
+    aspect-ratio: 5/2;
     position: relative;
     cursor:url(../cursors/hand-pointer.png) 2 2, pointer;
     font-size: 20px;
@@ -30,9 +31,8 @@
         background-position: right;
     }
     @include responsive(large){
-        background-size: 480px 90px;
         width: 240px;
-        height: 90px; 
+        // height: 90px; 
         font-size: 17px;   
     }
 

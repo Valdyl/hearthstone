@@ -37,7 +37,7 @@ export default {
         }
     },
     components: {
-        Card,
+        Card
     },
 
     computed:{
@@ -54,7 +54,7 @@ export default {
     },
     mounted(){
         this.updateRevelead(this.collectionArr)
-    },
+    }
 }
 </script>
 

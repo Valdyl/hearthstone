@@ -9,7 +9,6 @@
   <script>
     import { animate } from "motion"
 
-
     export default {
       name: 'LoaderScreen',
       data(){
@@ -29,7 +28,6 @@
                 vm.launched = false
               })
             })
-            
             animate(targetLogoContainer, {opacity:1},{duration: 1.5, easing :"ease-out", delay: 0.2})
         }
       },

@@ -8,13 +8,19 @@
 <script>
 
 import { animate } from "motion"
-import {collectionCardsStore} from "@/stores/collectionCards"
+import {collectionCardsStore} from "@/stores/collectionCards"    
+import {volumeStore} from "@/stores/volume"
+import { mapState} from 'pinia'
+
 import { mapActions} from 'pinia'
 
 export default {
 
     name: 'Card',
     props:["img","rarity","gold","sound","customClass","itemId","card","turnOver"],
+    computed:{
+      ...mapState(volumeStore,['volumeValue'])
+    },
     methods:{
         ...mapActions(collectionCardsStore,['addCardIntoCollection']),
         revealFront(){
@@ -22,11 +28,11 @@ export default {
             let audioReturn = new Audio(this.turnOver);
             if(!this.$refs.card.classList.contains("revealed")){
                 if(audio != undefined){
-                    audio.volume = 0.8;
                     audio.play()
+                    audio.volume = this.volumeValue/100;
                 }
-                audioReturn.volume = 0.6;
                 audioReturn.play()
+                audioReturn.volume = this.volumeValue/100;
                 this.addCardIntoCollection(this.card)
             }
             this.$refs.card.classList.add("revealed")
