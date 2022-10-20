@@ -32,7 +32,11 @@ export default {
                     audio.volume = this.volumeValue/100;
                 }
                 audioReturn.play()
-                audioReturn.volume = this.volumeValue/100;
+                if(this.volumeValue > 0 && this.volumeValue < 25){
+                    audioReturn.volume = 0.1;
+                }else{
+                    audioReturn.volume = (this.volumeValue/100)-0.2;
+                }
                 this.addCardIntoCollection(this.card)
             }
             this.$refs.card.classList.add("revealed")
@@ -40,8 +44,8 @@ export default {
         getSound(){
             let random = 0
             if(this.sound.length > 1){
-                // random = Math.round(Math.random()*(this.sound.length-1))
-                random = 2
+                random = Math.round(Math.random()*(this.sound.length-1))
+                // random = 2
             }
             return new Audio(this.sound[random]);
         },
